@@ -1,0 +1,8 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ""
+    relative_path: /home/dartanion/catkin_ws/src/URDF/wmra.urdf
+  SRDF:
+    relative_path: config/wmra.srdf
+  CONFIG:
+    generated_timestamp: 1429893601

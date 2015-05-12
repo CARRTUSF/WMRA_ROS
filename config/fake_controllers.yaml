@@ -1,0 +1,13 @@
+controller_list:
+  - name: fake_arm_controller
+    joints:
+      - wmra_arm_joint_0
+      - wmra_arm_joint_1
+      - wmra_arm_joint_2
+      - wmra_arm_joint_3
+      - wmra_arm_joint_4
+      - wmra_arm_joint_5
+      - wmra_arm_joint_6
+  - name: fake_gripper_controller
+    joints:
+      []

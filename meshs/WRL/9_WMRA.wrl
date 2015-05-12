@@ -1,0 +1,312 @@
+#VRML V2.0 utf8
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%%%%%%%%% COPY RIGHTS RESERVED %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#%%%%%%%%%%%%%%%%%%% Developed By: Redwan M. Alqasemi %%%%%%%%%%%%%%%%%%%%%
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% April 2007 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NavigationInfo { type "EXAMINE" speed 30 avatarSize [ 1, 0, 0 ] headlight TRUE }
+DEF WMRAROBOT Group {
+  children[
+    Group {
+      children [
+	DEF EXT_SETTINGS Group {
+	  children [
+	    WorldInfo { title "Wheelchair Mounted Robotic Arm, By: Redwan Alqasemi, USF 2007"},
+	    NavigationInfo {
+	       type "EXAMINE"
+	       avatarSize 180
+	       visibilityLimit 200
+	       speed 1000
+	    },
+
+        Background {
+            groundColor [ 0.8 0.7 0.1 , 0.8 0.7 0.1]
+            groundAngle [1.57]
+            skyColor [ 0 0 1 , 0 0.5 1 , 0 0.5 1 , 0.5 0.5 0.5 , 1 0.5 0]
+            skyAngle [ 1 1.15 1.35 1.57]
+            #topUrl "cloud.jpg"
+        },
+
+        DEF DynamicView Transform {
+        rotation 0 1 0 0
+        translation 0 0 0
+          children [
+            Viewpoint {
+              description "a_start"
+              position 2500 500 1800
+              orientation 0 1 0 0.8
+              jump FALSE 
+            },
+            Viewpoint {
+              description "a_far"
+              position 900 6000 -200 
+              orientation -0.601 -0.547 -0.582 2.172
+              jump FALSE 
+            },
+            Viewpoint {
+              description "a_bk-lt-up"
+              position -1300 1600 -1600
+              orientation -0.1 -1 -0.25 2.4
+              jump FALSE 
+            },
+            Viewpoint {
+              description "a_bk-lt-dn"
+              position -1400 400 -1800
+              orientation 0.025 -1 0.037 2.4
+              jump FALSE 
+              },
+            Viewpoint {
+              description "a_ft-lt-up"
+              position 1600 1800 -1400
+              orientation -0.1 0.9 0.25 2.4
+              jump FALSE 
+            },
+            Viewpoint {
+              description "a_ft-lt-dn"
+              position 1700 400 -1600
+              orientation 0.031 1 -0.052 2.4
+              jump FALSE 
+            },
+            Viewpoint {
+              description "a_ft-rt-up"
+              position 1600 1900 1500
+              orientation -0.4 0.5 0.14 0.85
+              jump FALSE 
+            },
+            Viewpoint {
+              description "a_ft-rt-dn"
+              position 1700 300 1900
+              orientation 0.191 1 -0.075 0.615
+              jump FALSE 
+            },
+            Viewpoint {
+              description "a_bk-rt-up"
+              position -1700 1700 1700
+              orientation -0.25 -0.5 -0.12 1
+              jump FALSE 
+            },
+            Viewpoint {
+              description "a_bk-rt-dn"
+              position -1800 500 1900
+              orientation 0.116 -1 0.021 0.818
+              jump FALSE 
+            },
+            Viewpoint {
+              description "a_birdeye"
+              position -1100 4900 -1900
+              orientation -0.56 -0.72 -0.4 2.2
+              jump FALSE 
+            },
+            Viewpoint {
+              description "a_top"
+              position 200 3100 0
+              orientation -0.577 -0.577 -0.577 2.1
+              jump FALSE 
+            },
+          ]}
+        Viewpoint {
+          description "top"
+          position 200 3100 0
+          orientation -0.577 -0.577 -0.577 2.1
+          jump FALSE 
+        },
+        Viewpoint {
+          description "birdeye"
+          position -1100 4900 -1900
+          orientation -0.56 -0.72 -0.4 2.2
+          jump FALSE 
+        },
+        Viewpoint {
+          description "bk-rt-dn"
+          position -1800 500 1900
+          orientation 0.116 -1 0.021 0.818
+          jump FALSE 
+        },
+        Viewpoint {
+          description "bk-rt-up"
+          position -1700 1700 1700
+          orientation -0.25 -0.5 -0.12 1
+          jump FALSE 
+        },
+        Viewpoint {
+          description "ft-rt-dn"
+          position 1700 300 1900
+          orientation 0.191 1 -0.075 0.615
+          jump FALSE 
+        },
+        Viewpoint {
+          description "ft-rt-up"
+          position 1600 1900 1500
+          orientation -0.4 0.5 0.14 0.85
+          jump FALSE 
+        },
+        Viewpoint {
+          description "ft-lt-dn"
+          position 1700 400 -1600
+          orientation 0.031 1 -0.052 2.4
+          jump FALSE 
+        },
+        Viewpoint {
+          description "ft-lt-up"
+          position 1600 1800 -1400
+          orientation -0.1 0.9 0.25 2.4
+          jump FALSE 
+        },
+        Viewpoint {
+          description "bk-lt-dn"
+          position -1400 400 -1800
+          orientation 0.025 -1 0.037 2.4
+          jump FALSE 
+          },
+        Viewpoint {
+          description "bk-lt-up"
+          position -1300 1600 -1600
+          orientation -0.1 -1 -0.25 2.4
+          jump FALSE 
+        },
+        Viewpoint {
+          description "far"
+          position 900 6000 -200 
+          orientation -0.601 -0.547 -0.582 2.172
+          jump FALSE 
+        },
+        Viewpoint {
+          description "start"
+          position 2500 500 1800
+          orientation 0 1 0 0.8
+          jump FALSE 
+        },
+
+	    DEF GROUND Transform {
+	       rotation 1 0 0 0
+	       translation 0 0 0
+	       children [
+		   Shape {
+		   geometry Box { size 5000 1 5000 }
+		   appearance Appearance {
+		   texture ImageTexture { url "9_Z_Ground.jpg" repeatS TRUE repeatT TRUE }
+		   textureTransform	TextureTransform {
+	       rotation 0
+           center 0 0
+           translation	0 0
+           scale	3 3
+        }}}]},
+		
+    ]}
+    ]}
+
+        # Transforming the wheelchair world coordinate system to the VR's world coordinate system:
+        DEF World Transform {
+        rotation 1 0 0 -1.5707963
+        translation 0 0 0
+        children [
+
+        DEF Chair Transform {
+        rotation 0 0 1 0
+        translation -440 -230 168
+          children [
+#          DEF WCR SphereSensor {}
+#          DEF WCT PlaneSensor { minPosition -400 0 maxPosition 400 0 }
+          Group {
+          children [Inline { url "0_Chair.wrl" }
+
+        DEF LWheel Transform {
+        rotation 0 1 0 0
+        translation 0 0 0
+          children [
+#          DEF LW CylinderSensor { diskAngle 0 minAngle 1.5707963 maxAngle 1.5707963 }
+          Group {
+          children [Inline { url "0_LWheel.wrl" }]}]}
+
+        DEF RWheel Transform {
+        rotation 0 1 0 0
+        translation 0 0 0
+          children [
+#          DEF RW CylinderSensor { diskAngle 0 minAngle 1.5707963 maxAngle 1.5707963 }
+          Group {
+          children [Inline { url "0_RWheel.wrl" }]}]}
+
+        DEF ARM1 Transform {         
+        rotation 1 0 0 1.5707963
+        translation 440 220 139
+          children [
+#          DEF JOINT1 CylinderSensor { diskAngle 0 minAngle 1.5707963 maxAngle 1.5707963 }
+          Group {
+          children [Inline { url "1.wrl" }
+
+        DEF ARM2 Transform {         
+        rotation 0 0 -1 1.5707963
+        translation 0 42.69 -75.1
+          children [
+#          DEF JOINT2 CylinderSensor { diskAngle 0 minAngle -1.5708 maxAngle 1.5708 }
+          Group {
+          children [Inline { url "2.wrl" }
+        
+        DEF ARM3 Transform {         
+        rotation 0 1 0 1.5707963
+        translation -1.73 75.08 -42.7
+          children [
+#          DEF JOINT3 CylinderSensor { diskAngle 0 minAngle -3.1416 maxAngle 3.1416 }
+          Group {
+          children [Inline { url "3.wrl" }
+        
+        DEF ARM4 Transform {
+        rotation 0 0 -1 0
+        translation -2.92 42.64 -75.08
+          children [
+#          DEF JOINT4 CylinderSensor { diskAngle 0 minAngle -3.1416 maxAngle 3.1416 }
+          Group {
+          children [Inline { url "4.wrl" }
+
+        DEF ARM5 Transform {         
+        rotation 0 1 0 1.5707963
+        translation -11.45 74.85 -423.58
+          children [
+#          DEF JOINT5 CylinderSensor { diskAngle 0 minAngle -3.1416 maxAngle 3.1416 }
+          Group {
+          children [Inline { url "5.wrl" }
+
+        DEF ARM6 Transform {         
+        rotation 0 0 -1 1.5707963
+        translation -2.17 45.99 -75.1
+          children [
+#          DEF JOINT6 CylinderSensor { diskAngle 0 minAngle -3.1416 maxAngle 3.1416 }
+          Group {
+          children [Inline { url "6.wrl" }
+        
+        DEF ARM7 Transform {         
+        rotation 0 1 0 1.5707963
+        translation -2.92 -61.52 -161.49
+          children [
+#          DEF JOINT7 CylinderSensor { diskAngle 0 minAngle -1.5708 maxAngle 1.5708 }
+          Group {
+          children [Inline { url "7.wrl" }
+        
+        DEF ARM8 Transform {
+        rotation 0 0 -1 0
+        translation -1.78 61.39 -192.29
+          children [
+#          DEF JOINT8 CylinderSensor { diskAngle 0 minAngle -3.1416 maxAngle 3.1614 }
+          Group {
+          children [Inline { url "8.wrl" }
+
+        ]}]} ]}]} ]}]} ]}]} ]}]} ]}]} ]}]} ]}]} ]}]} ]}
+
+#        ROUTE WCT.translation_changed TO Chair.set_translation
+#        ROUTE WCR.rotation_changed TO Chair.set_rotation
+#        ROUTE LW.rotation_changed TO LWheel.set_rotation
+#        ROUTE RW.rotation_changed TO RWheel.set_rotation
+#        ROUTE JOINT1.rotation_changed TO ARM1.set_rotation
+ #       ROUTE JOINT2.rotation_changed TO ARM2.set_rotation
+  #      ROUTE JOINT3.rotation_changed TO ARM3.set_rotation
+   #     ROUTE JOINT4.rotation_changed TO ARM4.set_rotation
+    #    ROUTE JOINT5.rotation_changed TO ARM5.set_rotation
+     #   ROUTE JOINT6.rotation_changed TO ARM6.set_rotation
+      #  ROUTE JOINT7.rotation_changed TO ARM7.set_rotation
+       # ROUTE JOINT8.rotation_changed TO ARM8.set_rotation
+
+]}
